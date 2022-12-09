@@ -1,0 +1,603 @@
+/*************************************************************************/
+/*     	                 		STRAT VARIABLE  		            	 */
+/*************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+:root {
+  --effect-1: 500ms ease;
+  --effect-2: all .3s ease-in-out;
+  --defaut-font: 'Noto Sans JP', sans-serif;
+  --defaut-color: #333333;
+}
+
+/*************************************************************************/
+/*     	                		END VARIABLE  		                	 */
+/*************************************************************************/
+/*************************************************************************/
+/*     		           	STRAT BASIC RESET  			                     */
+/*************************************************************************/
+html {
+  color: var(--defaut-color);
+  background: #fff;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: normal;
+  font-weight: normal;
+}
+
+del, ins {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+abbr {
+  cursor: help;
+}
+
+label {
+  cursor: pointer;
+}
+
+sup {
+  vertical-align: baseline;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: var(--defaut-color);
+}
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+/*@purpose To enable resizing for IE */
+/*@branch For IE6-Win, IE7-Win */
+input, button, textarea, select {
+  *font-size: 100%;
+}
+
+img {
+  vertical-align: top;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table,
+input, textarea, select, option {
+  line-height: 1.1;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+  line-height: 1;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+dt, dd {
+  line-height: 1.7;
+}
+
+th, td {
+  border: 1px solid;
+  padding: 1em;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+}
+
+caption {
+  padding-bottom: .5em;
+  text-align: left;
+}
+
+dfn {
+  font-style: normal;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* End hide from IE-mac */
+/*************************************************************************/
+/*     		           	END BASIC RESET  			                     */
+/*************************************************************************/
+body {
+  font-family: var(--defaut-font);
+  font-size: 16px;
+  color: var(--defaut-color);
+  line-height: 2;
+  letter-spacing: .1em;
+  font-weight: normal;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+html > body {
+  font-size: 16px;
+}
+
+select {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  color: var(--defaut-color);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+input {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  color: var(--defaut-color);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+button {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  color: var(--defaut-color);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+textarea {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  color: var(--defaut-color);
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+table {
+  font-size: inherit;
+}
+
+pre {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  *font-size: 108%;
+  line-height: 1.5;
+  color: var(--defaut-color);
+  font-size: 100%;
+}
+
+code {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  *font-size: 108%;
+  line-height: 1.5;
+  color: var(--defaut-color);
+}
+
+kbd {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  *font-size: 108%;
+  line-height: 1.5;
+  color: var(--defaut-color);
+}
+
+samp {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  *font-size: 108%;
+  line-height: 1.5;
+  color: var(--defaut-color);
+}
+
+tt {
+  font-family: var(--defaut-font);
+  font-size: 100%;
+  *font-size: 108%;
+  line-height: 1.5;
+  color: var(--defaut-color);
+}
+
+li {
+  font-size: 100%;
+}
+
+li li {
+  font-size: 100%;
+}
+
+li dt {
+  font-size: 100%;
+}
+
+li dd {
+  font-size: 100%;
+}
+
+li input {
+  font-size: 100%;
+}
+
+li select {
+  font-size: 100%;
+}
+
+li button {
+  font-size: 100%;
+}
+
+li textarea {
+  font-size: 100%;
+}
+
+li p {
+  font-size: 100%;
+}
+
+li th {
+  font-size: 100%;
+}
+
+li td {
+  font-size: 100%;
+}
+
+dt {
+  font-size: 100%;
+}
+
+dt li {
+  font-size: 100%;
+}
+
+dt dt {
+  font-size: 100%;
+}
+
+dt dd {
+  font-size: 100%;
+}
+
+dt input {
+  font-size: 100%;
+}
+
+dt select {
+  font-size: 100%;
+}
+
+dt button {
+  font-size: 100%;
+}
+
+dt textarea {
+  font-size: 100%;
+}
+
+dt p {
+  font-size: 100%;
+}
+
+dt th {
+  font-size: 100%;
+}
+
+dt td {
+  font-size: 100%;
+}
+
+dd {
+  font-size: 100%;
+}
+
+dd li {
+  font-size: 100%;
+}
+
+dd dt {
+  font-size: 100%;
+}
+
+dd dd {
+  font-size: 100%;
+}
+
+dd input {
+  font-size: 100%;
+}
+
+dd select {
+  font-size: 100%;
+}
+
+dd button {
+  font-size: 100%;
+}
+
+dd textarea {
+  font-size: 100%;
+}
+
+dd p {
+  font-size: 100%;
+}
+
+dd th {
+  font-size: 100%;
+}
+
+dd td {
+  font-size: 100%;
+}
+
+th {
+  font-size: 100%;
+}
+
+th li {
+  font-size: 100%;
+}
+
+th dt {
+  font-size: 100%;
+}
+
+th dd {
+  font-size: 100%;
+}
+
+th input {
+  font-size: 100%;
+}
+
+th select {
+  font-size: 100%;
+}
+
+th button {
+  font-size: 100%;
+}
+
+th textarea {
+  font-size: 100%;
+}
+
+th p {
+  font-size: 100%;
+}
+
+th th {
+  font-size: 100%;
+}
+
+th td {
+  font-size: 100%;
+}
+
+td {
+  font-size: 100%;
+}
+
+td li {
+  font-size: 100%;
+}
+
+td dt {
+  font-size: 100%;
+}
+
+td dd {
+  font-size: 100%;
+}
+
+td input {
+  font-size: 100%;
+}
+
+td select {
+  font-size: 100%;
+}
+
+td button {
+  font-size: 100%;
+}
+
+td textarea {
+  font-size: 100%;
+}
+
+td p {
+  font-size: 100%;
+}
+
+td th {
+  font-size: 100%;
+}
+
+td td {
+  font-size: 100%;
+}
+
+p {
+  font-size: 100%;
+}
+
+p input {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 100%;
+}
+
+h2 {
+  font-size: 100%;
+}
+
+h3 {
+  font-size: 100%;
+}
+
+h4 {
+  font-size: 100%;
+}
+
+h5 {
+  font-size: 100%;
+}
+
+h6 {
+  font-size: 100%;
+}
+
+blockquote {
+  font-size: 100%;
+}
+
+address {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  html > body {
+    font-size: 14px;
+  }
+}
+
+/*************************************************************************/
+/*     			                STRAT UTILITIES  			  			 */
+/*************************************************************************/
+@media only screen and (max-width: 768px) {
+  .pc_only {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .sp_only {
+    display: none !important;
+  }
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/*************************************************************************/
+/*     							END UTILITIES 							 */
+/*************************************************************************/
+/*************************************************************************/
+/*     	           		STRAT MAIN CONTENTS CSS FOR PC  		    	 */
+/*************************************************************************/
+/*************************************************************************/
+/*     	           		END MAIN CONTENTS CSS FOR PC  		        	 */
+/*************************************************************************/
+/*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/*************************************************************************/
+/*     			  STRAT MAIN CONTENTS CSS FOR TABLET AND SP  		     */
+/*************************************************************************/
+/*************************************************************************/
+/*     			   END MAIN CONTENTS CSS FOR TABLET AND SP  			 */
+/*************************************************************************/
